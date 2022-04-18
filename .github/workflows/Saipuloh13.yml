@@ -46,7 +46,15 @@ jobs:
 
 # Run a command to sort your JAV files while searching folders recursively (within the folders)
 > Javinizer -Path "C:\SPL\Unsorted" -DestinationPath "C:\SPL\Sorted" -Recurse
+# To run GUI
+docker run --name javinizer -p 8600:8600 -d jvlflame/javinizer:latest
 
+# To run CLI
+docker run --name javinizer -p 8600:8600 -d jvlflame/javinizer:latest-cli
+
+# Optional
+# You will need to copy the jvSettings.json configuration from [here](./src/Javinizer/jvSettings.json) and write it to your path/to/jvSettings.json location
+-v path/to/jvSettings.json:/home/jvSettings.json
 # Run a command to sort a SPL file using direct URLs
 > Saipuloh13 -Path "C:\SPL\Unsorted\IPX-535.mp4" -Url 'https://www.javlibrary.com/en/?v=javmeza7s4', 'https://www.r18.com/videos/vod/movies/detail/-/id=ipx00535/'
 
@@ -61,7 +69,8 @@ jobs:
 
 # Open the Javinizer settings configuration
 > Javinizer -OpenSettings
-
+"sort.format.folder": "<ID> [<STUDIO>] - <TITLE> (<YEAR>)",
+"sort.format.outputfolder": []
 # Update your Javinizer module
 > saipuloh13 -UpdateModule
 
