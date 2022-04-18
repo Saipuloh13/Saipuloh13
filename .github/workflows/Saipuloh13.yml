@@ -31,15 +31,40 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: |Sanz-Tzy
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        run: |Saipuloh13-SPL
+# Run a command to sort your JAV files using default settings
+> Saipuloh13 -Path "C:\SPL\Unsorted" -DestinationPath "C:\SPL\Sorted"
+
+# Run a command to sort your JAV files while searching folders recursively (within the folders)
+> Javinizer -Path "C:\SPL\Unsorted" -DestinationPath "C:\SPL\Sorted" -Recurse
+
+# Run a command to sort a SPL file using direct URLs
+> Saipuloh13 -Path "C:\SPL\Unsorted\IPX-535.mp4" -Url 'https://www.javlibrary.com/en/?v=javmeza7s4', 'https://www.r18.com/videos/vod/movies/detail/-/id=ipx00535/'
+
+# Run a command to find metadata
+> Saipuloh -Find "ABP-420" -SPLlibrary
+
+# Run a command to find metadata and aggregate it according to your settings file
+> Saipuloh -Find "ABP-420" -SPLlibrary -R18 -DmmJa -Aggregated
+
+# Run a command to find metadata, aggregate it according to your settings file, and output the nfo
+> Saipuloh -Find "ABP-420" -Javlibrary -R18 -DmmJa -Aggregated -Nfo
+
+# Open the Javinizer settings configuration
+> Javinizer -OpenSettings
+
+# Update your Javinizer module
+> saipuloh13 -UpdateModule
+
+# View the Javinizer commandline help (may not be up to date)
+> Saipuloh13 -Help
+          echo Add other actions to build echo test, and deploy your project.
 # To run GUI
-docker run --name javinizer -p 8600:8600 -d jvlflame/javinizer:latest
+docker run --name saipuloh13 -p 8600:8600 -d jvlflame/saipuloh13:latest
 
 # To run CLI
-docker run --name javinizer -p 8600:8600 -d jvlflame/javinizer:latest-cli
+docker run --name saipuloh13 -p 8600:8600 -d jvlflame/saipuloh13:latest-cli
 
 # Optional
-# You will need to copy the jvSettings.json configuration from [here](./src/Javinizer/jvSettings.json) and write it to your path/to/jvSettings.json location
--v path/to/jvSettings.json:/home/jvSettings.json
+# You will need to copy the jvSettings.json configuration from [here](./src/saipuloh13/SPLSettings.json) and write it to your path/to/jvSettings.json location
+-v path/to/SPLSettings.json:/home/SPLSettings.json
