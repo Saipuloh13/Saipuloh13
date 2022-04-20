@@ -22,7 +22,7 @@ $ pip install bs4
 
 $ pip install futures
 
-$ git clone https://github.com/saipuloh13/saipuloh13
+$ git clone https://github.com/saipuloh13/SPL
 
 $ ls
 
